@@ -1,16 +1,13 @@
-# aplication_01
+# Counter
 
 A new Flutter project.
 
-## Getting Started
+## About the project
 
-This project is a starting point for a Flutter application.
+The application is based on a 1 in 1 click counter. It has 3 buttons -1, refresh and +1 and this counter has a limit that cannot be less than 0.
 
-A few resources to get you started if this is your first Flutter project:
+- Pressing the +1 button will generate a numerical sequence in which each number obtained will be the sum of 1 with the previous number, it has no limit.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Pressing the -1 button will generate a numerical sequence in which each number obtained will be the subtraction of 1 with the previous number until it reaches 0, after this each time the button is pressed it will not obtain any change other than 0.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- When you press the refresh button, the value will change to 0 regardless of the number it is on.
