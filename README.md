@@ -12,4 +12,6 @@ The application is based on a 1 in 1 click counter. It has 3 buttons -1, refresh
 
 - When you press the refresh button, the value will change to 0 regardless of the number it is on.
 
+__________________________________________________________________________________
+
 ![appFunction](https://github.com/mauricio2093/Counter/assets/68365906/e4214064-1528-4f5b-a443-860ab49f191c)
