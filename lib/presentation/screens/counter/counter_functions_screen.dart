@@ -45,35 +45,55 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          FloatingActionButton(
-            shape: const StadiumBorder(),
+          CustomButton(
+            icon: Icons.exposure_minus_1,
             onPressed: () {
               setState(() {
-                clickCounter > 0 ? clickCounter-- : 0;
+                clickCounter <= 0 ? 0 : clickCounter--;
               });
             },
-            child: const Icon(Icons.exposure_minus_1),
           ),
-          FloatingActionButton(
-            shape: const StadiumBorder(),
+          CustomButton(
+            icon: Icons.refresh,
             onPressed: () {
               setState(() {
                 clickCounter = 0;
               });
             },
-            child: const Icon(Icons.refresh),
           ),
-          FloatingActionButton(
-            shape: const StadiumBorder(),
+          CustomButton(
+            icon: Icons.plus_one,
             onPressed: () {
               setState(() {
                 clickCounter++;
               });
             },
-            child: const Icon(Icons.plus_one),
           ),
         ],
       ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final IconData icon;
+  final VoidCallback? onPressed;
+
+  const CustomButton({
+    super.key,
+    required this.icon,
+    this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      // shape: const StadiumBorder(),
+      enableFeedback: true,
+      elevation: 6,
+      backgroundColor: const Color.fromARGB(255, 55, 219, 219),
+      onPressed: onPressed,
+      child: Icon(icon),
     );
   }
 }
